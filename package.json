@@ -47,3 +47,15 @@
     "typescript": "~2.5.3"
   }
 }
+
+{
+  "name": "node-example",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "3.1.x"
+  },
+  "engines": {
+    "node": "8.9.x",
+    "npm": "5.6.x"
+  }
+}

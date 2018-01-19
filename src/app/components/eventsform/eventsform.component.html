@@ -31,7 +31,7 @@
       >Email must be not empty </div>
       <div class="alert alert-danger mt-2"
            *ngIf="!emailValue.errors?.required && emailValue.invalid"
-      >Email example:example@exapmle.com</div>
+      >Email example : example@exapmle.com</div>
     </div>
     <button [disabled]="form.invalid" type="submit" class="btn btn-success">Save</button>
   </form>
