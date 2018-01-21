@@ -51,8 +51,8 @@
         <button class="btn btn-danger" (click)="removeUser(i)">Delete</button>
       </td>
       <td>
-        <button class="btn btn-primary" *ngIf="!user.editing" (click)="editHandler(i)">Edit</button>
-        <button class="btn btn-primary" *ngIf="user.editing" (click)="editHandler(i)">Set</button>
+        <button class="btn btn-primary" *ngIf="!user.editing" (click)="editTodo(i)">Edit</button>
+        <button class="btn btn-primary" *ngIf="user.editing" (click)="editTodo(i)">Set</button>
       </td>
     </tr>
   </table>
