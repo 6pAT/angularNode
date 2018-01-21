@@ -44,6 +44,7 @@ export class TodoComponent implements OnInit {
   }
   addTodo(form){
     this.todoService.addTodo(this.todo).subscribe(todo=>{
+      this.todos.unshift(todo);
       this.showAlertMessage('Task add success', true);
     }, error2 => {
       this.showAlertMessage('Task add error', false);
@@ -74,11 +75,11 @@ export class TodoComponent implements OnInit {
   }
 
   doneTodo(todo, index){
-    todo.completed=!todo.completed;
-    this.todoService.editTodo(todo, index+1).subscribe( todo=>{
-      this.showAlertMessage('Task done successfully', true);
+    this.todoService.editTodo(todo, index+1).subscribe( t=>{   //как преобразовать t к нашему todo
+      todo.completed=!todo.completed;
+      this.showAlertMessage('Task changed successfully', true);
     }, error=>{
-      this.showAlertMessage('Task done error', false);
+      this.showAlertMessage('Task changed error', false);
     });
   }
 }
